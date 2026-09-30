@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Pagamento seguro via Pix para receber seu produto digital.">
+  <title>Pagamento via Pix | Produto digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand brand-name" href="#inicio">SEU PRODUTO</a>
+    <span class="creator">PRODUTO DIGITAL</span>
+    <span class="secure"><span aria-hidden="true">●</span> Pix seguro</span>
+  </header>
+  <main id="inicio">
+    <section class="checkout-card" aria-label="Contribuição e pagamento">
+      <div class="profile-photo" role="img" aria-label="Foto de Kamylinha Santos"></div>
+      <div class="checkout-content">
+        <p class="eyebrow">COMPRA SEGURA</p>
+        <h1>Compre seu produto digital</h1>
+        <p class="description">Faça o pagamento via Pix. Assim que a SyncPay confirmar, o link para acessar seu produto aparecerá aqui na tela.</p>
+        <div class="transparency">Produto digital · entrega por link após a confirmação do pagamento.</div>
+        <div class="amount"><span>Pagamento único</span><strong>R$ 9,90</strong></div>
+        <form id="checkout-form">
+          <label for="name">Nome completo</label>
+          <input id="name" name="name" autocomplete="name" minlength="3" placeholder="Seu nome" required>
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="seuemail@email.com" required>
+          <button class="pay-button" type="submit" id="generate">Gerar Pix</button>
+          <p class="error" id="error" role="alert"></p>
+        </form>
+        <div class="pix-result" id="pix-result" hidden>
+          <h2>Pix gerado</h2>
+          <img id="qr" class="qr" alt="QR Code Pix">
+          <p class="pix-help">Escaneie o QR Code ou copie o código para pagar no aplicativo do seu banco.</p>
+          <div class="copy-row"><input id="pix-code" readonly aria-label="Código Pix copia e cola"><button id="copy-pix" type="button">Copiar</button></div>
+          <p class="payment-status" id="payment-status" aria-live="polite">Aguardando confirmação do pagamento…</p>
+        </div>
+        <div class="delivery-result" id="delivery-result" role="status" aria-live="polite" hidden>
+          <h2>Pagamento confirmado!</h2>
+          <p>Aqui está seu produto:</p>
+          <a id="product-link" href="#" target="_blank" rel="noopener noreferrer">Acessar meu produto</a>
+          <p id="delivery-note" class="delivery-note" hidden></p>
+        </div>
+      </div>
+    </section>
+    <p class="footnote">O pagamento é processado pela SyncPay. O acesso ao produto é liberado após a confirmação.</p>
+  </main>
+  <script src="./app.js" defer></script>
+</body>
+</html>
+
