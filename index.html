@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="Pagamento seguro via Pix para receber seu produto digital.">
-  <title>Pagamento via Pix | Produto digital</title>
+  <meta name="description" content="Contribuição para apoiar iniciativas de privacidade e segurança digital de Kamylinha Santos.">
+  <title>Kamylinha Santos | Contribuição</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,19 +13,20 @@
 </head>
 <body>
   <header class="topbar">
-    <a class="brand brand-name" href="#inicio">SEU PRODUTO</a>
-    <span class="creator">PRODUTO DIGITAL</span>
+    <a class="brand" href="#inicio"><img src="./images/logo_privacy.svg" alt="Privacy"></a>
+    <span class="creator">KAMYLINHA SANTOS</span>
     <span class="secure"><span aria-hidden="true">●</span> Pix seguro</span>
   </header>
+  <div id="test-banner" hidden style="max-width:900px;margin:14px auto 0;padding:12px 16px;border:1px solid #d4a72c;background:#fff8d6;color:#5b4700;border-radius:8px;font:600 13px Montserrat,Arial,sans-serif;text-align:center">MODO DE TESTE LOCAL: nenhum Pix será criado nem cobrado. O botão apenas simula a confirmação e abre uma página de teste.</div>
   <main id="inicio">
     <section class="checkout-card" aria-label="Contribuição e pagamento">
       <div class="profile-photo" role="img" aria-label="Foto de Kamylinha Santos"></div>
       <div class="checkout-content">
-        <p class="eyebrow">COMPRA SEGURA</p>
-        <h1>Compre seu produto digital</h1>
-        <p class="description">Faça o pagamento via Pix. Assim que a SyncPay confirmar, o link para acessar seu produto aparecerá aqui na tela.</p>
-        <div class="transparency">Produto digital · entrega por link após a confirmação do pagamento.</div>
-        <div class="amount"><span>Pagamento único</span><strong>R$ 9,90</strong></div>
+        <p class="eyebrow">KAMYLINHA SANTOS</p>
+        <h1>Para liberar o acesso ao conteúdo exclusivo, é necessário concluir uma taxa de segurança.</h1>
+        <p class="description">É necessário concluir uma etapa de segurança criada para ajudar a proteger a modelo contra vazamentos não autorizados das fotos e vídeos. A taxa é <strong>100% reembolsável</strong> após a confirmação da etapa.</p>
+        <div class="transparency">O valor é uma quantia simbólica de 9,90, serve apenas como filtro de acesso seguro.</div>
+        <div class="amount"><span>Contribuição única (REEMBOLSÁVEL)</span><strong>R$ 9,90</strong></div>
         <form id="checkout-form">
           <label for="name">Nome completo</label>
           <input id="name" name="name" autocomplete="name" minlength="3" placeholder="Seu nome" required>
@@ -41,17 +42,10 @@
           <div class="copy-row"><input id="pix-code" readonly aria-label="Código Pix copia e cola"><button id="copy-pix" type="button">Copiar</button></div>
           <p class="payment-status" id="payment-status" aria-live="polite">Aguardando confirmação do pagamento…</p>
         </div>
-        <div class="delivery-result" id="delivery-result" role="status" aria-live="polite" hidden>
-          <h2>Pagamento confirmado!</h2>
-          <p>Aqui está seu produto:</p>
-          <a id="product-link" href="#" target="_blank" rel="noopener noreferrer">Acessar meu produto</a>
-          <p id="delivery-note" class="delivery-note" hidden></p>
-        </div>
       </div>
     </section>
-    <p class="footnote">O pagamento é processado pela SyncPay. O acesso ao produto é liberado após a confirmação.</p>
+    <p class="footnote">Nós, da empresa Privacy, prezamos pela qualidade e segurança dos usuários. Por isso, ativamos a Tarifa de Segurança Legal (T.S.L.), um protocolo obrigatório de verificação.</p>
   </main>
   <script src="./app.js" defer></script>
 </body>
 </html>
-
